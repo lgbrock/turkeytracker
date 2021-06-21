@@ -1,0 +1,55 @@
+.login {
+	height: calc(100vh - 50px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(
+			rgba(255, 255, 255, 0.5),
+			rgba(255, 255, 255, 0.5)
+		),
+		url('https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/01/12201051/cute-puppy-body-image.jpg');
+	background-size: cover;
+}
+
+.loginTitle {
+	font-size: 50px;
+}
+
+.loginForm {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.loginForm > label {
+	margin: 10px 0;
+}
+
+.loginInput {
+	padding: 10px;
+	background-color: #fff;
+	border: none;
+}
+
+.loginButton {
+	margin-top: 20px;
+	cursor: pointer;
+	background-color: lightblue;
+	border: none;
+	color: #fff;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.loginRegisterButton {
+	position: absolute;
+	top: 60px;
+	right: 20px;
+	background-color: lightblue;
+	cursor: pointer;
+	border: none;
+	padding: 10px;
+	color: #fff;
+	border-radius: 10px;
+}
