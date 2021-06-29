@@ -2,7 +2,7 @@ const router = require('express').Router();
 const User = require('../models/User');
 const Post = require('../models/Post');
 
-//CREATE Post
+// CREATE Post
 router.post('/', async (req, res) => {
 	const newPost = new Post(req.body);
 	try {
@@ -13,7 +13,8 @@ router.post('/', async (req, res) => {
 	}
 });
 
-//UPDATE Post
+// UPDATE Post
+// if id matches => allow update - if not, do not allow update
 router.put('/:id', async (req, res) => {
 	try {
 		const post = await Post.findById(req.params.id);
@@ -38,7 +39,7 @@ router.put('/:id', async (req, res) => {
 	}
 });
 
-//DELETE Post
+// DELETE Post
 router.delete('/:id', async (req, res) => {
 	try {
 		const post = await Post.findById(req.params.id);
@@ -57,7 +58,7 @@ router.delete('/:id', async (req, res) => {
 	}
 });
 
-//GET Post
+// GET Post
 router.get('/:id', async (req, res) => {
 	try {
 		const post = await Post.findById(req.params.id);
@@ -67,7 +68,8 @@ router.get('/:id', async (req, res) => {
 	}
 });
 
-//GET All Posts
+// GET All Posts
+// $in => includes
 router.get('/', async (req, res) => {
 	const username = req.query.user;
 	const catName = req.query.cat;
