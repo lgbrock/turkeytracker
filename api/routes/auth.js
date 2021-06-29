@@ -31,7 +31,7 @@ router.post('/login', async (req, res) => {
         // validates if bcrypt password matches User login password
         const validated = await bcrypt.compare(req.body.password, user.password)
         !validated && res.status(400).json('Wrong password')
-
+        // make sure password is not saved in MongoDB
         const { password, ...others } = user._doc
         res.status(200).json(others)
     } catch (err) {
