@@ -21,14 +21,16 @@ router.post('/register', async (req, res) => {
     }
 })
 
+
 // Login
 router.post('/login', async (req, res) => {
     try {
+        // finds user inside of MongoDB
         const user = await User.findOne({ username: req.body.username })
-        !user && res.status(400).json('Wrong credentials!')
-        // checks if bcrypt password matches User login password
+        !user && res.status(400).json('Wrong username!')
+        // validates if bcrypt password matches User login password
         const validated = await bcrypt.compare(req.body.password, user.password)
-        !validated && res.status(400).json('Wrong credentials')
+        !validated && res.status(400).json('Wrong password')
 
         const { password, ...others } = user._doc
         res.status(200).json(others)
@@ -36,5 +38,6 @@ router.post('/login', async (req, res) => {
         res.status(500).json(err)
     }
 })
+
 
 module.exports = router
