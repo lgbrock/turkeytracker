@@ -1,17 +1,19 @@
-import Post from "../post/Post"
-import './posts.css'
+import Post from '../post/Post';
+import './posts.css';
 
-const Posts = () => {
-    return (
-        <div className="posts">
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-        </div>
-    )
-}
+const Posts = ({ posts }) => {
+	return (
+		<div className='posts'>
+			<Post />
+			<Post />
+		</div>
+	);
+};
 
-export default Posts
+export default Posts;
+
+/*
+{posts.map((p) => (
+				<Post post={p} />
+			))}
+*/
