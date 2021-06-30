@@ -12,9 +12,3 @@ const Posts = ({ posts }) => {
 };
 
 export default Posts;
-
-/*
-{posts.map((p) => (
-				<Post post={p} />
-			))}
-*/
