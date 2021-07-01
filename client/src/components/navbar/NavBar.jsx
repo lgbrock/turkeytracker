@@ -6,6 +6,8 @@ import './navbar.css';
 const NavBar = () => {
 	const { user, dispatch } = useContext(Context);
 
+	const PF = 'http://localhost:5000/images/';
+
 	const handleLogout = () => {
 		dispatch({ type: 'LOGOUT' });
 	};
@@ -47,7 +49,9 @@ const NavBar = () => {
 			</div>
 			<div className='navRight'>
 				{user ? (
-					<img className='navImg' src={user.profilePic} alt='' />
+					<Link to='/settings'>
+						<img className='navImg' src={PF + user.profilePic} alt='' />
+					</Link>
 				) : (
 					<ul className='navList'>
 						<li className='navListItem'>
