@@ -4,7 +4,11 @@ import { Context } from '../../context/Context';
 import './navbar.css';
 
 const NavBar = () => {
-	const { user } = useContext(Context);
+	const { user, dispatch } = useContext(Context);
+
+	const handleLogout = () => {
+		dispatch({ type: 'LOGOUT' });
+	};
 
 	return (
 		<div className='nav'>
@@ -36,7 +40,9 @@ const NavBar = () => {
 							Write
 						</Link>
 					</li>
-					<li className='navListItem'>{user && 'Logout'}</li>
+					<li className='navListItem' onClick={handleLogout}>
+						{user && 'Logout'}
+					</li>
 				</ul>
 			</div>
 			<div className='navRight'>
