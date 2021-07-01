@@ -1,0 +1,19 @@
+{
+  "name": "turkeytracker",
+  "version": "1.0.0",
+  "description": "App for dogs daily habits",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgbrock/turkeytracker.git"
+  },
+  "author": "Logan Brock",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lgbrock/turkeytracker/issues"
+  },
+  "homepage": "https://github.com/lgbrock/turkeytracker#readme"
+}
