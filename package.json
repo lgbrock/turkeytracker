@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lgbrock/turkeytracker/issues"
   },
-  "homepage": "https://github.com/lgbrock/turkeytracker#readme"
+  "homepage": "https://github.com/lgbrock/turkeytracker#readme",
+  "dependencies": {
+    "heroku": "^7.56.0"
+  }
 }
