@@ -32,10 +32,10 @@ npm run test
 
 👤 **Logan Brock**
 
-* Website: www.linkedin.com/in/loganbrock
+* Website: logangbrock.com
 * Twitter: [@lifeisagarden23](https://twitter.com/lifeisagarden23)
 * Github: [@lgbrock](https://github.com/lgbrock)
-* LinkedIn: [@Logan Brock](https://linkedin.com/in/Logan Brock)
+* LinkedIn: [@Logan Brock](www.linkedin.com/in/loganbrock)
 
 ## Show your support
 
