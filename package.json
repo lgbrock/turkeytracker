@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lgbrock/turkeytracker#readme",
   "dependencies": {
+    "concurrently": "^6.2.0",
     "heroku": "^7.56.0"
   }
 }
