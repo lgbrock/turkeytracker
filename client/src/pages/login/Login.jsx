@@ -22,34 +22,34 @@ const Login = () => {
 			dispatch({ type: 'LOGIN_FAILURE' });
 		}
 	};
-	console.log(isFetching);
+
 	return (
 		<div className='login'>
 			<span className='loginTitle'>Login</span>
 			<form className='loginForm' onSubmit={handleSubmit}>
 				<label>Username</label>
 				<input
-					className='loginInput'
 					type='text'
+					className='loginInput'
 					placeholder='Enter your username...'
 					ref={userRef}
 				/>
 				<label>Password</label>
 				<input
-					className='loginInput'
 					type='password'
+					className='loginInput'
 					placeholder='Enter your password...'
 					ref={passwordRef}
 				/>
 				<button className='loginButton' type='submit' disabled={isFetching}>
 					Login
 				</button>
-				<button className='loginRegisterButton' type='submit'>
-					<Link className='link' to='/register'>
-						Register
-					</Link>
-				</button>
 			</form>
+			<button className='loginRegisterButton'>
+				<Link className='link' to='/register'>
+					Register
+				</Link>
+			</button>
 		</div>
 	);
 };

@@ -4,14 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js",
-		"server": "nodemon index.js",
-		"client": "npm start --prefix client",
-		"dev": "concurrently \"npm run index\" \"npm run client\""
+		"start": "nodemon index.js",
+		"server": "node index.js",
+		"client": "npm start --prefix client"
 	},
 	"author": "Logan Brock",
 	"license": "MIT",
 	"dependencies": {
+		"axios": "^0.21.4",
 		"bcrypt": "^5.0.1",
 		"concurrently": "^6.2.0",
 		"dotenv": "^10.0.0",

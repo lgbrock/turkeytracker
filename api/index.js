@@ -42,14 +42,7 @@ app.use('/api/users', userRoute);
 app.use('/api/posts', postRoute);
 app.use('/api/categories', categoryRoute);
 
-app.use(express.static('public'));
-
-app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-	console.log(`Backend is running on port ${PORT}...`);
+// Port
+app.listen(process.env.PORT || 5000, () => {
+	console.log('Backend server is running...');
 });
