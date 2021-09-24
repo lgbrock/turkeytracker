@@ -3,8 +3,8 @@ import Header from '../../components/header/Header';
 import Posts from '../../components/posts/Posts';
 import Sidebar from '../../components/sidebar/Sidebar';
 import './home.css';
-import axios from 'axios';
 import { useLocation } from 'react-router';
+import { axiosInstance } from '../../config';
 
 const Home = () => {
 	const [posts, setPosts] = useState([]);
@@ -14,7 +14,7 @@ const Home = () => {
 	useEffect(() => {
 		const fetchPosts = async () => {
 			// grabs posts data
-			const res = await axios.get('/posts' + search);
+			const res = await axiosInstance.get('/posts' + search);
 			setPosts(res.data);
 		};
 		fetchPosts();

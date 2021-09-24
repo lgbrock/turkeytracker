@@ -5,8 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "nodemon index.js",
-		"server": "node index.js",
-		"client": "npm start --prefix client"
+		"heroku-postbuild": "cd client && npm install && npm run build"
 	},
 	"author": "Logan Brock",
 	"license": "MIT",
