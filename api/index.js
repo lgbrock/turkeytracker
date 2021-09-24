@@ -23,15 +23,18 @@ mongoose
 	.then(console.log('Connected to MongoDB...'))
 	.catch((err) => console.log(err));
 
+// Multer - image storage
+// change req.body.name to string in order to work in Postman
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, 'images');
 	},
 	filename: (req, file, cb) => {
-		cb(null, 'req.body.name');
+		cb(null, req.body.name);
 	},
 });
 
+// Multer - image upload
 const upload = multer({ storage: storage });
 app.post('/api/upload', upload.single('file'), (req, res) => {
 	res.status(200).json('File has been uploaded');

@@ -4,9 +4,9 @@ import './posts.css';
 const Posts = ({ posts }) => {
 	return (
 		<div className='posts' key={posts.id}>
-			{/* {posts.map((p) => (
+			{posts.map((p) => (
 				<Post post={p} />
-			))} */}
+			))}
 		</div>
 	);
 };
