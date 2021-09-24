@@ -1,10 +1,31 @@
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './header.css';
 
 const Header = () => {
+	const location = useLocation();
+	const [post, setPost] = useState({});
+	const path = location.pathname.split('/')[2];
+
+	useEffect(() => {
+		const getPost = async () => {
+			const res = await axios.get('/posts/' + path);
+			setPost(res.data.username);
+		};
+		getPost();
+	}, [path]);
+
 	return (
 		<div className='header'>
 			<div className='headerTitles'>
-				<span className='headerTitleSm'>Dog Name</span>
+				<span className='headerTitleSm'>
+					Dog Name:
+					<Link to={`/?user=${post.username}`} className='link'>
+						<b> {post.username}</b>
+					</Link>
+				</span>
 				<span className='headerTitleLg'>Blog</span>
 			</div>
 			<img
